@@ -1,0 +1,101 @@
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    font-size: 1.7rem;
+    background: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/bg_header.jpg) no-repeat;
+    padding: 20px;
+    color: #fff;
+    
+}
+
+
+/* INPUT */
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(181, 53, 53);
+    padding: 5px;
+}
+
+/* ASIDE & SECTION */
+
+aside {
+    background: grey;
+    width: 40%;
+    min-width: 40%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+#article-container {
+    display: flex;
+    justify-content: center;
+    background: grey;
+}
+
+article {
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: rgb(181, 53, 53);
+    padding: 50px;
+    margin: 60px 0 0 0;
+}
+
+/* RESPONSIVE TABLETTE */
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #article-container article:nth-child(2n+0) {
+        display: none;
+    }
+    aside {
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 576px) {
+    #article-container article:first-of-type {
+        display: none;
+        background: yellow;
+    }
+}
