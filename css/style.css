@@ -23,9 +23,8 @@ img {
 /* HEADER */
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-column: 1;
+    text-align: center;
     background: url(../img/bg_header.jpg) no-repeat;
     padding: 20px;
     color: #fff;
@@ -36,9 +35,8 @@ header {
 /* INPUT */
 
 .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-column: 1;
+    text-align: center;
     background: rgb(181, 53, 53);
     padding: 5px;
 }
@@ -47,16 +45,17 @@ header {
 
 aside {
     background: grey;
-    width: 40%;
-    min-width: 40%;
+    width: 100%;
+    min-width: 100%;
     text-align: center;
 }
 
 main {
-    display: flex;
+    display: grid;
 }
 
 #article-container {
+    grid-column: 2;
     display: flex;
     justify-content: center;
     background: grey;
@@ -79,14 +78,15 @@ footer {
 /* RESPONSIVE TABLETTE */
 
 @media (max-width: 768px) {
-    main {
-        display: flex;
-        flex-direction: column-reverse;
+    #article-container {
+        grid-row: 1;
+        grid-column: 1;
     }
     #article-container article:nth-child(2n+0) {
         display: none;
     }
     aside {
+        grid-column: 1;
         width: 100%;
     }
 }
